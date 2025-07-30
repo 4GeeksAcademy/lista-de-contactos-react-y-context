@@ -35,6 +35,9 @@ Aplicación web para gestionar una lista de contactos, desarrollada con React, C
 | Fetch API    | nativo  | Llamadas HTTP a la API                 |
 | Bootstrap    | 5.x     | Estilos y componentes responsivos      |
 
+
+[🔝 Volver al índice](#índice)
+
 ---
 
 ## Capturas de pantalla
@@ -44,6 +47,8 @@ Las capturas de pantalla del proyecto se encuentran en la carpeta `screenshots` 
 ![Pantalla principal](screenshots/home.png)
 ![Formulario de contacto](screenshots/formulario.png)
 ![Modal para eliminar](screenshots/modal.png)
+
+[🔝 Volver al índice](#índice)
 
 ---
 
@@ -76,6 +81,8 @@ cp .env.example .env
 npm run start
 ```
 Abre tu navegador y accede a la URL que te indique la terminal tras ejecutar `npm run start`.
+
+[🔝 Volver al índice](#índice)
 
 ---
 
@@ -121,6 +128,8 @@ src/
 - **Store/Actions**: Estado global y lógica de negocio.
 - **Hooks**: Acceso al store y dispatch.
 
+[🔝 Volver al índice](#índice)
+
 ---
 
 ## Contribución
@@ -157,6 +166,8 @@ Desarrollado por [4Geeks Academy](https://4geeksacademy.com/) y la comunidad.
 
 ---
 
+[🔝 Volver al índice](#índice)
+
 ---
 
 ## Glosario y preguntas frecuentes
@@ -173,3 +184,6 @@ Desarrollado por [4Geeks Academy](https://4geeksacademy.com/) y la comunidad.
 
 > ¡Gracias por contribuir y usar este proyecto!  
 > _Recuerda mantener este README actualizado con cada cambio relevante._
+
+
+[🔝 Volver al índice](#índice)
