@@ -39,7 +39,7 @@ Aplicación web para gestionar una lista de contactos, desarrollada con React, C
 
 ## Capturas de pantalla
 
-Las capturas deben guardarse en la carpeta `screenshots` en la raíz del proyecto. Ejemplo de rutas:
+Las capturas de pantalla del proyecto se encuentran en la carpeta `screenshots` y muestran las principales vistas de la aplicación:
 
 ![Pantalla principal](screenshots/home.png)
 ![Formulario de contacto](screenshots/formulario.png)
