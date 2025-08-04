@@ -1,16 +1,36 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import React, { useEffect, useState } from 'react';
+import useGlobalReducer from '../hooks/useGlobalReducer';
+import actions from '../actions';
+import ContactoCard from '../components/ContactoCard';
+import ModalConfirmacion from '../components/ModalConfirmacion';
 
-export const Home = () => {
+const Home = () => {
+    const { store, dispatch } = useGlobalReducer();
+    const [idParaBorrar, setIdParaBorrar] = useState(null);
 
-  const {store, dispatch} =useGlobalReducer()
+    useEffect(() => {
+        actions.cargarContactos(dispatch);
+    }, []);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
-}; 
+    return (
+        <div className="pb-5 ">
+            <div className="list-group">
+                {store.contactos.length > 0 ? (
+                    store.contactos.map(contacto => (
+                        <ContactoCard key={contacto.id} contacto={contacto} onAbrirModal={setIdParaBorrar} />
+                    ))
+                ) : (
+                    <p className="text-center">No hay contactos, ¡agrega uno!</p>
+                )}
+            </div>
+                {idParaBorrar ? (
+                <ModalConfirmacion
+                    idAEliminar={idParaBorrar}
+                    onCerrar={() => setIdParaBorrar(null)}
+                />
+                ) : null}
+           </div>
+    );
+};
+
+export default Home;

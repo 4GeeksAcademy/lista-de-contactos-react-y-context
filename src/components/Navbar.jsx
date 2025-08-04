@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-export const Navbar = () => {
+const Navbar = () => {
+    const { pathname } = useLocation();
 
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+    const OcultarBoton = pathname.startsWith("/formulario");
+
+    return (
+        <nav className="navbar navbar-light">
+            <div className="container">
+                <div className="ms-auto">
+                    {!OcultarBoton && (
+                        <Link to="/formulario">
+                            <button className="btn btn-success my-2">Add new contact</button>
+                        </Link>
+                    )}
+                </div>
+            </div>
+        </nav>
+    );
 };
+
+export default Navbar;

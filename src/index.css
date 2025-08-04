@@ -1,0 +1,31 @@
+.btn-success {
+  background-color:rgb(49, 156, 0);  
+  border-color:rgb(49, 156, 0);
+  color: white;
+}
+
+.avatar-contacto {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.borde-personalizado {
+  border: 1px solid #51535447;
+}
+
+.fs-8 {
+  font-size: 0.87rem;
+}
+
+.fs-5-5 {
+  font-size: 1.125rem; 
+}
+
+.enlace-atras {
+ text-decoration: none;
+}
+
+.enlace-atras:hover {
+     text-decoration: underline; 
+}
